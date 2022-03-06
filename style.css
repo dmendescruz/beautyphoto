@@ -488,29 +488,19 @@ footer .social a:hover {
 }
 
 /* -------------------- RESPONSIVIDADE -------------------- */
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .container {
-    max-width: 1120px;
+    max-width: 700px;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .section {
-    padding: 10rem 0;
   }
 
   .section header,
   #testimonials header {
-    max-width: 32rem;
-    text-align: center;
     margin-left: auto;
     margin-right: auto;
   }
-
-  .button {
-    height: 3.125;
-  }
-
+  /* Abrir Menu */
   nav .menu {
     opacity: 1;
     visibility: visible;
@@ -533,40 +523,14 @@ footer .social a:hover {
     display: none;
   }
 
-  main {
-    margin-top: var(--header-height);
-  }
-
   /* Home */
   #home .container {
     margin: 0 auto;
-    grid-auto-flow: column;
-    justify-content: space-between;
-  }
-  #home .image {
-    order: 1;
-  }
-
-  #home .text {
-    order: 0;
-    max-width: 24rem;
-    text-align: left;
   }
 
   /* About */
   #about .container {
     margin: 0 auto;
-    grid-auto-flow: column;
-  }
-
-  /* Services*/
-  .cards {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  .card {
-    padding-left: 3rem;
-    padding-right: 3rem;
   }
 
   /* Testimonials */
@@ -580,19 +544,14 @@ footer .social a:hover {
 
   /* Contact */
   #contact .container {
-    grid-auto-flow: column;
-    align-items: center;
+    justify-content: space-between;
   }
-
-  #contact .text {
-    max-width: 25rem;
+  #contact ul.grid {
+    display: flex;
+    flex-direction: row;
   }
 
   /* Footer */
-  footer.section {
-    padding: 3.75rem 0;
-  }
-
   footer .container {
     grid-auto-flow: column;
     align-items: center;
@@ -608,5 +567,80 @@ footer .social a:hover {
   :root {
     --title-font-size: 2.25rem;
     --subtitle-font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 1023px) {
+  .container {
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section {
+    padding: 10rem 0;
+  }
+
+  .section header,
+  #testimonials header {
+    max-width: 32rem;
+    text-align: center;
+  }
+
+  .button {
+    height: 3.125;
+  }
+
+  main {
+    margin-top: var(--header-height);
+  }
+
+  /* Home */
+  #home .container {
+    grid-auto-flow: column;
+    justify-content: space-between;
+  }
+  #home .image {
+    order: 1;
+  }
+
+  #home .text {
+    order: 0;
+    max-width: 24rem;
+    text-align: left;
+  }
+
+  /* About */
+  #about .container {
+    grid-auto-flow: column;
+  }
+
+  /* Services*/
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .card {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  /* Contact */
+  #contact ul.grid {
+    display: grid;
+  }
+
+  #contact .container {
+    grid-auto-flow: column;
+    align-items: center;
+  }
+
+  #contact .text {
+    max-width: 25rem;
+  }
+
+  /* Footer */
+  footer.section {
+    padding: 3.75rem 0;
   }
 }
